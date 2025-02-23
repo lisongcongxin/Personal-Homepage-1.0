@@ -185,40 +185,48 @@ h3 {
     header h1 {
         font-size: 2em;
     }
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}.social-item {
-    text-align: center;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}.social-item:hover {
-    transform: translateY(-5px);
-}.social-item img {
-    width: 200px;  /* 固定宽度 */
-    height: 200px; /* 固定高度 */
-    object-fit: contain; /* 保持原始比例 */
-    margin-bottom: 1rem;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}.social-item h3 {
-    margin: 1rem 0 0.5rem;
-    color: #333;
-}.social-item .account-name {
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 0.5rem;
-}.social-item .description {
-    color: #666;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}.social-item a {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }.profile-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }.social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }.social-item {
+        text-align: center;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }.social-item:hover {
+        transform: translateY(-5px);
+    }.social-item img {
+        width: 200px;  /* 固定宽度 */
+        height: 200px; /* 固定高度 */
+        object-fit: contain; /* 保持原始比例 */
+        margin-bottom: 1rem;
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }.social-item h3 {
+        margin: 1rem 0 0.5rem;
+        color: #333;
+    }.social-item .account-name {
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 0.5rem;
+    }.social-item .description {
+        color: #666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }.social-item a {
         text-decoration: none;
         color: inherit;
         display: block;
