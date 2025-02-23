@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李怂的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>李怂</h1>
+            <p class="subtitle">光而不耀，静水流深</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile">
+            <h2>基本信息</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <h3>家乡</h3>
+                    <p>江苏盐城</p>
+                </div>
+                <div class="profile-item">
+                    <h3>学校</h3>
+                    <p>南通大学</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="personality">
+            <h2>性格特征</h2>
+            <div class="personality-grid">
+                <div class="personality-item">
+                    <h3>MBTI性格类型</h3>
+                    <p>INTJ</p>
+                </div>
+                <div class="personality-item">
+                    <h3>霍兰德兴趣类型</h3>
+                    <div class="holland-types">
+                        <div class="holland-type">
+                            <span class="type-label">I</span>
+                            <p>研究型（主导）</p>
+                        </div>
+                        <div class="holland-type">
+                            <span class="type-label">R</span>
+                            <p>现实型</p>
+                        </div>
+                        <div class="holland-type">
+                            <span class="type-label">C</span>
+                            <p>常规型</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="habits">
+            <h2>成长习惯</h2>
+            <div class="habits-grid">
+                <div class="habit-item">
+                    <h3>阅读</h3>
+                    <p>每天阅读一小时</p>
+                </div>
+                <div class="habit-item">
+                    <h3>运动</h3>
+                    <p>夜跑</p>
+                </div>
+                <div class="habit-item">
+                    <h3>理财</h3>
+                    <p>定投币圈</p>
+                </div>
+                <div class="habit-item">
+                    <h3>写作</h3>
+                    <p>累计字数15w+</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interests">
+            <h2>兴趣爱好</h2>
+            <div class="interests-container">
+                <div class="interests-list">
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #FF6384;"></span>
+                        <span class="interest-name">乒乓：八年生涯，水平依旧</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #36A2EB;"></span>
+                        <span class="interest-name">台球：周末无事，必打台球</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #FFCE56;"></span>
+                        <span class="interest-name">音乐：深夜回忆，音乐渡我</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #4BC0C0;"></span>
+                        <span class="interest-name">电影：身在陋室，心游世界</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #57a15d;"></span>
+                        <span class="interest-name">阅读：徜徉书海，亦师亦友</span>
+                    </div>
+                    <div class="interest-item">
+                        <span class="dot" style="background-color: #FF9F40;"></span>
+                        <span class="interest-name">搞钱：人生大事，搞钱重要</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="interestsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="current-focus">
+            <h2>最近动态</h2>
+            <ul class="focus-list">
+                <li>深入理解阳明心学</li>
+                <li>个人用AI agent的开发</li>
+                <li>一个线上支流项目的尝试</li>
+            </ul>
+        </section>
+
+        <section class="social-media">
+            <h2>社交媒体</h2>
+            <div class="social-grid">
+                <div class="social-item">
+                    <img src="images/wechat-qr.png" alt="微信二维码">
+                    <h3>微信</h3>
+                    <p class="account-name">惊鸿</p>
+                    <p class="description">朋友圈分享个人感悟与思考</p>
+                </div>
+                <div class="social-item">
+                    <img src="images/mp-qr.png" alt="公众号二维码">
+                    <h3>微信公众号</h3>
+                    <p class="account-name">李怂</p>
+                    <p class="description">个人成长、个人观点、个人创意</p>
+                </div>
+                <div class="social-item">
+                    <img src="images/video-qr.png" alt="视频号二维码">
+                    <h3>微信视频号</h3>
+                    <p class="account-name">李怂</p>
+                    <p class="description">个人分享</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 李怂. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- 在 footer 后，</body> 前添加 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('interestsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['乒乓', '台球', '音乐', '电影', '阅读', '搞钱'],
+                datasets: [{
+                    data: [10, 20, 15, 15, 25, 15],
+                    backgroundColor: [
+                        '#FF6384',
+                        '#36A2EB',
+                        '#FFCE56',
+                        '#4BC0C0',
+                        '#9966FF',
+                        '#FF9F40'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'right'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return `${context.label}: ${context.raw}%`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
